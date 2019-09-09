@@ -44,3 +44,9 @@ C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Vie
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Event\Details.g.cshtml.cs
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Event\Edit.g.cshtml.cs
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Event\Index.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Lock\Index.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Lock\Unlock.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Lock\Erreur.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Lock\SignOff.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Parametre\Index.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Parametre\Login.g.cshtml.cs
