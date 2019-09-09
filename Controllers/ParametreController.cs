@@ -16,11 +16,13 @@ namespace Smartsafe.Controllers
       // INITIALISATION DES CONTEXT DB
         private readonly UserContext _context;
         private readonly VariableContext _context2;
+        private readonly EventContext _context3;
         
-        public ParametreController(UserContext context1, VariableContext context2)
+        public ParametreController(UserContext context1, VariableContext context2,EventContext context3)
         {
             _context = context1;
             _context2 = context2;
+            _context3 = context3;
         }        
         
 
@@ -38,22 +40,34 @@ namespace Smartsafe.Controllers
                             where (m.UserNumber == user.UserNumber )
                             select m).Single();
 
-            // vérification du mot de passe correspondant
-            if (userdb.Password == user.Password)
-            {                
-                // on donne l'accès en validant le token de connexion
-                 var signedin = (from m in _context2.Variable
-                            select m).Single();
-                signedin.SignedIn= 1;
-                _context2.SaveChanges();
+                // vérification du mot de passe correspondant
+                if (userdb.Password == user.Password)
+                {                
+                    // on donne l'accès en validant le token de connexion
+                    var signedin = (from m in _context2.Variable
+                                select m).Single();
+                    signedin.SignedIn= 1;
+                    _context2.SaveChanges();
 
-                return RedirectToAction("Index","Parametre");
-            }
+                       //on Enregistre l'évènement
+                    _context3.Event.AddRange(
 
-              if (userdb.Password != user.Password)
-            {                
-                return RedirectToAction("Erreur","Lock");
-            }
+                    new Event{
+                        Date = DateTime.Now,
+                        Source = "User",
+                        Criticite = 1,
+                        Description = "Accès Paramètre",           
+                        }
+                    );
+                    _context3.SaveChanges();
+
+                    return RedirectToAction("Index","Parametre");
+                }
+
+                if (userdb.Password != user.Password)
+                {                
+                    return RedirectToAction("Erreur","Lock");
+                }
                 
             }
             catch (System.Exception)

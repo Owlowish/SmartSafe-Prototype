@@ -15,11 +15,13 @@ namespace Smartsafe.Controllers
         // INITIALISATION DES CONTEXT DB
         private readonly UserContext _context;
         private readonly VariableContext _context2;
+        private readonly EventContext _context3;
         
-        public LockController(UserContext context1, VariableContext context2)
+        public LockController(UserContext context1, VariableContext context2, EventContext context3)
         {
             _context = context1;
             _context2 = context2;
+            _context3 = context3;
         }        
         
         public IActionResult Index()
@@ -54,22 +56,32 @@ namespace Smartsafe.Controllers
 
             // vérification du mot de passe correspondant
             if (userdb.Password == user.Password)
-            {                
+           {                 
                 // on donne l'accès en validant le token de connexion
                  var signedin = (from m in _context2.Variable
                             select m).Single();
                 signedin.SignedIn= 1;
                 _context2.SaveChanges();
 
-                return RedirectToAction("Unlock","Lock");
+                // on enregistre l'évenement
+                
+                _context3.Event.AddRange(
+
+                    new Event{
+                        Date = DateTime.Now,
+                        Source = "User",
+                        Criticite = 1,
+                        Description = "Ouverture Coffre",           
+                    }
+                );
+                _context3.SaveChanges();
+                 return RedirectToAction("Unlock","Lock");
             }
 
-              if (userdb.Password != user.Password)
-            {                
+              if (userdb.Password != user.Password)               
                 return RedirectToAction("Erreur","Lock");
             }
-                
-            }
+
             catch (System.Exception)
             {      
                  return RedirectToAction("Erreur","Lock");
@@ -78,10 +90,14 @@ namespace Smartsafe.Controllers
             return View(user);
         }
 
+
+
           public IActionResult Unlock()
         {
             return View();
         }
+
+
 
          public IActionResult Erreur()
         {
