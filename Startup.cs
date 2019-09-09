@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Smartsafe.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Smartsafe
 {
@@ -30,6 +32,20 @@ namespace Smartsafe
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+
+            // initiate User DB
+            services.AddDbContext<UserContext>(options =>
+            options.UseSqlite(Configuration.GetConnectionString("UserContext")));
+
+            //initiate Variable DB
+            services.AddDbContext<VariableContext>(options =>
+            options.UseSqlite(Configuration.GetConnectionString("VariableContext")));
+
+            //initate Event DB
+            services.AddDbContext<EventContext>(options =>
+            options.UseSqlite(Configuration.GetConnectionString("EventContext")));
+
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
