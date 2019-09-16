@@ -22,6 +22,8 @@ namespace Smartsafe.Migrations.Variable
 
                     b.Property<int>("SignedIn");
 
+                    b.Property<string>("SignedInUser");
+
                     b.HasKey("Id");
 
                     b.ToTable("Variable");

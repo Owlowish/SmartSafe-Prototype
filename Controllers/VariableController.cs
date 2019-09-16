@@ -53,7 +53,7 @@ namespace Smartsafe.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,SignedIn")] Variable variable)
+        public async Task<IActionResult> Create([Bind("Id,SignedIn,SignedInUser")] Variable variable)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace Smartsafe.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,SignedIn")] Variable variable)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,SignedIn,SignedInUser")] Variable variable)
         {
             if (id != variable.Id)
             {

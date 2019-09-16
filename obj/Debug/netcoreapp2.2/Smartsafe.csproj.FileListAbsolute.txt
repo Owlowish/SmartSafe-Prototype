@@ -34,11 +34,6 @@ C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Vie
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\User\Details.g.cshtml.cs
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\User\Edit.g.cshtml.cs
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\User\Index.g.cshtml.cs
-C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Create.g.cshtml.cs
-C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Delete.g.cshtml.cs
-C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Details.g.cshtml.cs
-C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Edit.g.cshtml.cs
-C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Index.g.cshtml.cs
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Event\Create.g.cshtml.cs
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Event\Delete.g.cshtml.cs
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Event\Details.g.cshtml.cs
@@ -50,3 +45,8 @@ C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Vie
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Lock\SignOff.g.cshtml.cs
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Parametre\Index.g.cshtml.cs
 C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Parametre\Login.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Create.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Delete.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Details.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Edit.g.cshtml.cs
+C:\Users\cheyuh\Desktop\temp\ASP MVC\Smartsafe\obj\Debug\netcoreapp2.2\Razor\Views\Variable\Index.g.cshtml.cs

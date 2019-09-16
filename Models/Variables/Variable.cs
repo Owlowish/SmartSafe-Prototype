@@ -8,5 +8,6 @@ namespace Smartsafe.Models
     {
         public int Id { get; set; }
         public int SignedIn{ get; set; }
+        public string SignedInUser {get; set; }
     }
 }
