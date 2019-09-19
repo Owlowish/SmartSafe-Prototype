@@ -24,10 +24,15 @@ namespace Smartsafe
                 {
                     var context = services.GetRequiredService<UserContext>();
                     var context2 = services.GetRequiredService<VariableContext>();
+                    var context3 = services.GetRequiredService<EventContext>();
+                    
                     context.Database.Migrate();
                     context2.Database.Migrate();
+                    context3.Database.Migrate();
+
                     UserSeed.Initialize(services);
-                    VariableSeed.Initialize(services);        
+                    VariableSeed.Initialize(services); 
+                    EventSeed.Initialize(services);       
                 }
                 catch (Exception ex)
                 {
